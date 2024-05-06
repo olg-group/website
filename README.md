@@ -1,2 +1,1 @@
-# website
-OLG Group Website
+# OLG Group Website
