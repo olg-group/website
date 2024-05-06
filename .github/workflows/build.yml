@@ -1,0 +1,27 @@
+name: "Build Project"
+on:
+  workflow_call:
+  pull_request:
+  push:
+    branches-ignore:
+      - development
+
+jobs:
+  build:
+    name: "Create Website Artifact"
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+      - name: "Build for Production"
+        run: |
+          npm ci
+          npm run build
+      - name: "Upload Artifacts"
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist/*
