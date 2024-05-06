@@ -1,84 +1,209 @@
-body {
-  background: #eee;
-  text-align: center;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  cursor: default;
-  letter-spacing: 5px;
-  font-family: "M PLUS Code Latin", sans-serif;
-}
-body:after {
-  content: "";
-  background-image: url(https://raw.githubusercontent.com/weixiong15/PHP-Bookstore-Website-Example/master/bookstore/image/bg.gif);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-#container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-}
-#avatar {
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
-  border-radius: 5%;
-  width: 250px;
-  animation: bounce cubic-bezier(0.19, 1, 0.22, 1) 0.2s alternate infinite;
-  -webkit-animation: bounce cubic-bezier(0.19, 1, 0.22, 1) 0.2s alternate
-    infinite;
-}
-@keyframes bounce {
-  to {
-    transform: translateY(-5px) scale(1);
-    box-shadow: 0 0 10px #fff, 0 0 20px #dc2537, 0 0 30px #dc2537,
-      0 0 40px #dc2537, 0 0 70px #f14658, 0 0 80px #f14658;
-  }
-}
-@-webkit-keyframes bounce {
-  to {
-    -webkit-transform: translateY(-5px) scale(1);
-    box-shadow: 0 0 10px #fff, 0 0 20px #dc2537, 0 0 30px #dc2537,
-      0 0 40px #dc2537, 0 0 70px #f14658, 0 0 80px #f14658;
-  }
-}
-p {
-  color: rgba(0, 0, 0, 0.25);
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
-  font-family: "Libre Barcode 39 Text", cursive;
-  font-size: 2.2em;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Work+Sans");
-.type-wrap {
-  font-size: 50px;
-  padding: 20px;
-  color: #fff;
-  margin-top: 2%;
+html{
+    font-size: 62.5%; /* 1rem = 10px */
 }
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    
 }
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+.main-title{
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 }
+
+.main-title h1{
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #555;
+}
+
+.main-title h2{
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.svg-img{
+   display: block;
+   margin: auto;
+}
+
+svg{
+    display: block;
+   margin: auto;
+}
+
+#clock{
+    animation: clockHand 5s infinite linear;
+    
+    
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+#leftTree, #righTree{
+    animation: tree 2s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+#man{
+    animation: manBody 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+#pc-circle{
+    fill: #6ace66;
+    stroke-width: 4;
+    animation: change-light 4s linear infinite alternate;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background-color: #f5f5f5;
+    font-size: 1.3rem;
+}
+
+@keyframes clockHand{
+    from{
+        transform: rotateZ(0deg);
+    }
+    from{
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes manBody{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(10deg);
+    }
+}
+
+@keyframes tree{
+    from{
+        transform: rotateZ(10deg);
+    }
+    to{
+        transform: rotateZ(-20deg);
+    }
+}
+
+@keyframes change-light {
+    0% {
+        stroke: #cd61f8;
+      }
+      25% {
+        stroke: #6ace66;
+      }
+      75% {
+        stroke: #2995c0;
+      }
+      100% {
+        stroke: #e92949;
+      }
+  }
+
+  /* Media Queries */
+
+  @media (min-width: 640px){
+    .main-title h1{
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #555;
+    }
+    
+    .main-title h2{
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+     
+    }
+     
+    @media (min-width: 768px){
+        .main-title h1{
+            font-size: 6rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #555;
+        }
+        
+        .main-title h2{
+            font-size: 4rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    
+     
+    }
+     
+    @media (min-width: 1024px){
+     
+        .main-title h1{
+            font-size: 7rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #555;
+        }
+        
+        .main-title h2{
+            font-size: 5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+     
+    }
+     
+    @media (min-width: 1200px){
+     
+        .main-title h1{
+            font-size: 8rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #555;
+        }
+        
+        .main-title h2{
+            font-size: 5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .main-title{
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+     
+    }
