@@ -3,7 +3,7 @@
     <template #logo>
       <RouterLink to="/">
         <span class="sr-only">OLG Group</span>
-        <img class="h-9 w-auto" src="/Logo.png" alt="" />
+        <img class="h-9 w-auto" alt="OLG Logo" src="./assets/branding/LogoFull.svg" />
       </RouterLink>
     </template>
 

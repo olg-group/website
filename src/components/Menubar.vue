@@ -23,10 +23,9 @@
       <div class="fixed inset-0 z-50" />
       <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://placehold.co/37x37" alt="" />
-          </a>
+          <slot name="logo">
+
+          </slot>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
             <FontAwesomeIcon :icon="faXmark" class="h-6 w-6" aria-hidden="true" />
