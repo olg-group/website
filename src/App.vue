@@ -3,7 +3,7 @@
     <template #logo>
       <RouterLink to="/">
         <span class="sr-only">OLG Group</span>
-        <img class="h-8 w-auto" src="https://placehold.co/37x37" alt="" />
+        <img class="h-9 w-auto" src="/Logo.png" alt="" />
       </RouterLink>
     </template>
 
