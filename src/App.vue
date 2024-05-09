@@ -27,7 +27,7 @@
         <span class="sr-only">GitHub</span>
         <FontAwesomeIcon :icon="faGithub" class="h-8 w-8"></FontAwesomeIcon>
       </a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      <a href="https://linkedin.com/company/olggroup" target="_blank" rel="noopener noreferrer">
         <span class="sr-only">Linkedin</span>
         <FontAwesomeIcon :icon="faLinkedin" class="h-8 w-8"></FontAwesomeIcon>
       </a>
