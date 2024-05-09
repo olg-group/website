@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import HeroSection from "@/components/sections/HeroSection.vue";
+import ImageFeatureSection from "@/components/sections/ImageFeatureSection.vue";
+import {faBullseye, faForwardFast, faStar} from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <template>
@@ -17,9 +19,18 @@ import HeroSection from "@/components/sections/HeroSection.vue";
       </template>
     </HeroSection>
 
+    <ImageFeatureSection
+        title="Management Consulting"
+        subtitle="Accompanying you to the goal"
+        description="Our team of experienced industry experts accompanies your management in all matters of corporate management. From strategy to marketing, we support you comprehensively. Our expertise from areas such as corporate finance & investment banking or marketing is fully available to you."
+        image-url="https://placehold.co/2432x1442"
 
-    <img src="/favicon.svg">
-    <h1>Home</h1>
+        :features="[
+            {name: 'Customer-centric', icon: faBullseye,     description: 'We focus on your individual situation and the associated needs.'},
+            {name: 'Quality',        icon: faStar,         description: 'We have the highest standards for the quality of our work.'},
+            {name: 'Goal-oriented',    icon: faForwardFast,  description: 'We concentrate on results. At the core of our strategy lies effective action.'},
+        ]"
+    ></ImageFeatureSection>
   </main>
 </template>
 
