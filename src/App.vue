@@ -1,5 +1,5 @@
 <template>
-  <Menubar>
+  <Menubar class="navbar">
     <template #logo>
       <RouterLink to="/">
         <span class="sr-only">OLG Group</span>

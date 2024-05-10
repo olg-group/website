@@ -1,10 +1,14 @@
 <script setup lang="ts">
 
+import LeftAlignHeaderSection from "@/components/sections/LeftAlignHeaderSection.vue";
 </script>
 
 <template>
   <main>
-    <h1>About</h1>
+    <LeftAlignHeaderSection
+      title="About us"
+      description="Who is the OLG Group?"
+    ></LeftAlignHeaderSection>
   </main>
 </template>
 
