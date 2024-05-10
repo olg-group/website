@@ -2,9 +2,9 @@
   <div class="md:py-32 py-20 ">
     <div class="isolation-isolate relative">
       <div class="px-4 max-w-6xl mx-auto md:px-6 lg:px-8">
-        <div class=" round-10 px-10 flex-col flex-wrap justify-center items-center py-10 justify-center flex gap-10 p-10 bg-opacity-5 bg-white bg-opacity-5 max-w-5xl mx-auto md:py-20 md:gap-20 md:p-20 lg:max-w-none lg:mx-auto lg:flex-row lg:px-20 lg:pl-20 lg:pr-20">
+        <div class="round-10 px-10 flex-col flex-wrap justify-center items-center py-10 justify-center flex gap-10 p-10 bg-opacity-5 bg-white bg-opacity-5 max-w-5xl mx-auto md:py-20 md:gap-20 md:p-20 lg:max-w-none lg:mx-auto lg:flex-row lg:px-20 lg:pl-20 lg:pr-20">
           <img
-              class="md:max-w-6xl max-w-xs md:h-auto aspect-w-1 aspect-h-1 md:shadow-lg shadow-md overflow-hidden object-cover rounded-lg"
+              class="max-w-xs aspect-[1/1] shadow-md overflow-hidden object-cover rounded-lg md:max-w-6xl md:shadow-lg"
               :src="imageUrl"
               :alt="imageAlt"
           />
