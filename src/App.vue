@@ -23,11 +23,11 @@
       <RouterLink to="/datenschutzerklärung">Datenschutzerklärung</RouterLink>
     </template>
     <template #connections>
-      <LinkText to="https://github.com/olg-group" open-external>
+      <LinkText to="https://github.com/olg-group" open-external new-tab>
         <span class="sr-only">GitHub</span>
         <FontAwesomeIcon :icon="faGithub" class="h-8 w-8"></FontAwesomeIcon>
       </LinkText>
-      <LinkText to="https://linkedin.com/company/olggroup" open-external>
+      <LinkText to="https://linkedin.com/company/olggroup" open-external new-tab>
         <span class="sr-only">Linkedin</span>
         <FontAwesomeIcon :icon="faLinkedin" class="h-8 w-8"></FontAwesomeIcon>
       </LinkText>
