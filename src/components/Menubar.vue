@@ -50,7 +50,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
 
 import {Dialog, DialogPanel} from "@headlessui/vue";
-import {ref, defineProps} from 'vue';
+import {ref} from 'vue';
 
 const mobileMenuOpen = ref(false)
 </script>

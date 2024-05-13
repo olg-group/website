@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faArrowUp, faLock, faServer} from "@fortawesome/free-solid-svg-icons";
 </script>

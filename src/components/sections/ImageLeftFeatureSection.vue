@@ -35,7 +35,6 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps} from 'vue';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import type {IconDefinition} from "@fortawesome/free-regular-svg-icons";
 
