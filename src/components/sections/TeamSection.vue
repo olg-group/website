@@ -18,7 +18,7 @@
                 <p class="text-indigo-600">{{ person.role }}</p>
               </div>
               <ul role="list" class="flex space-x-5">
-                <li v-for="connection in person.connections" :key="connection">
+                <li v-for="connection in person.connections" :key="connection.to">
                   <a :href="connection.to" class="text-gray-400 hover:text-gray-500">
                     <span class="sr-only">{{ connection.name }}</span>
                     <FontAwesomeIcon class="w-5 h-5" :icon="connection.icon"></FontAwesomeIcon>
@@ -38,16 +38,16 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import type {IconDefinition} from "@fortawesome/free-regular-svg-icons";
 
 interface PersonInformation {
-  name: String,
-  imageUrl: String,
-  role: String,
+  name: string,
+  imageUrl: string,
+  role: string,
   connections: Connection[]
 }
 
 interface Connection {
-  name: String,
+  name: string,
   icon: IconDefinition,
-  to: String,
+  to: string,
 }
 
 const props = defineProps({

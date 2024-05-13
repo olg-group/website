@@ -39,13 +39,13 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import type {IconDefinition} from "@fortawesome/free-regular-svg-icons";
 
 interface FeaturePoint {
-  name: String,
-  description: String,
+  name: string,
+  description: string,
   icon: IconDefinition
 }
 
 const props = defineProps({
-  title: String | null,
+  title: { type: String, default: null, required: false },
   subtitle: String,
   description: String,
   imageUrl: String,

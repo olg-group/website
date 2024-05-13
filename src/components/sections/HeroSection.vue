@@ -32,8 +32,8 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  title: String | null,
-  description: String
+  title: { type: String, default: null, required: false },
+  description: { type: String, required: true }
 })
 </script>
 

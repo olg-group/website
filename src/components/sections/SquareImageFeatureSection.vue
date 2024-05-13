@@ -14,7 +14,7 @@
               {{ description }}
             </p>
             <ul v-if="features != null" class="text-gray-600 grid grid-cols-1 gap-y-3 gap-x-4 mt-10 md:gap-x-8 md:grid-cols-2">
-              <li v-for="feature in features" :key="feature" class="flex gap-[0.75rem]">
+              <li v-for="feature in features" :key="feature.name" class="flex gap-[0.75rem]">
                 <FontAwesomeIcon :icon="feature.icon" class="flex-none w-[1.25rem] h-[1.75rem]"></FontAwesomeIcon>
                 {{ feature.name }}
               </li>
@@ -31,7 +31,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import type {IconDefinition} from "@fortawesome/free-regular-svg-icons";
 
 interface FeaturePoint {
-  name: String,
+  name: string,
   icon: IconDefinition
 }
 
