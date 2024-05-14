@@ -19,7 +19,7 @@
 
   <Footer>
     <template #navigation>
-      <RouterLink to="/impressum">Impressum</RouterLink>
+      <RouterLink to="/legal/imprint">Impressum</RouterLink>
       <RouterLink to="/datenschutzerklärung">Datenschutzerklärung</RouterLink>
     </template>
     <template #connections>

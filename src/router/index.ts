@@ -25,6 +25,13 @@ const router = createRouter({
       name: 'management-consulting',
       component: () => import('@/views/field/ManagementConsulting.vue')
     },
+
+    // Legal
+    {
+      path: '/legal/imprint',
+      name: 'imprint',
+      component: () => import('@/views/legal/ImprintView.vue')
+    },
     {
       // this will be the default url handler => 404 Not Found
       path: '/:pathMatch(.*)*',
