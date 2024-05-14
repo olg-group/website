@@ -13,12 +13,46 @@ import CenteredContentSection from "@/components/sections/CenteredContentSection
   <main>
     <SimpleHeaderSection
       title="About us"
-      description="Who is the OLG Group?"
+      description="At The OLG Group, we specialize in providing expert IT and management consulting services, coupled with innovative software solutions. With a primary focus on small companies and startups, we are committed to empowering businesses like yours to thrive in today's digital landscape. Whether you're seeking guidance on IT strategies, business process optimization, or software development, we have the expertise and resources to support you every step of the way. Our ultimate vision is to foster a digital-powered society, leveraging modern technologies and solutions to drive innovation and growth. Join us at The OLG Group, and let's embark on a journey towards a more efficient and digitally empowered future together."
     ></SimpleHeaderSection>
 
+<TeamSection
+      title="Our Management Team"
+      description="Driven by our management, our team unites diverse disciplines to innovate in technology and business consulting."
+      :people="[
+          {
+            name: 'Kevin Ortmann',
+            role: 'Managing Partner',
+            imageUrl: '/src/assets/photos/portraits/kevin-ortmann.jpg',
+            connections: [
+                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/kevin-ortmann/' },
+                { name: 'GitHub', icon: faGithub, to: 'https://github.com/KevinOrtmann' }
+            ]
+          },
+          {
+            name: 'Malte Linke',
+            role: 'Managing Partner',
+            imageUrl: '/src/assets/photos/portraits/malte-linke.jpg',
+            connections: [
+                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
+                { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
+            ]
+          },
+          {
+            name: 'Nick Gildenstern',
+            role: 'Managing Partner',
+            imageUrl: '/src/assets/photos/portraits/nick-gildenstern.jpg',
+            connections: [
+                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/nick-gildenstern-477300222/' },
+                { name: 'GitHub', icon: faGithub, to: 'https://github.com/NickGildenstern/' }
+            ]
+          },
+      ]"
+    ></TeamSection>
+<!--
     <SquareImageFeatureSection
         title="OLG Group"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."
+        description="We do stuff"
         image-url="https://placehold.co/512x512"
         image-alt="Logo"
         :features="[{ name: 'Super Cool', icon: faRainbow }, { name: 'Super Cool', icon: faRainbow }, { name: 'Super Cool', icon: faRainbow }, { name: 'Super Cool', icon: faRainbow }]"
@@ -52,50 +86,10 @@ import CenteredContentSection from "@/components/sections/CenteredContentSection
       </template>
     </CenteredContentSection>
 
-    <TeamSection
-      title="Our Team"
-      description="Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies donec risus sodales. Tempus quis et."
-      :people="[
-          {
-            name: 'Malte Linke',
-            role: 'Managing Partner',
-            imageUrl: 'https://placehold.co/512x512',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
-            ]
-          },
-          {
-            name: 'Malte Linke',
-            role: 'Managing Partner',
-            imageUrl: 'https://placehold.co/512x512',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
-            ]
-          },
-          {
-            name: 'Malte Linke',
-            role: 'Managing Partner',
-            imageUrl: 'https://placehold.co/512x512',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
-            ]
-          },
-          {
-            name: 'Malte Linke',
-            role: 'Managing Partner',
-            imageUrl: 'https://placehold.co/512x512',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
-            ]
-          },
-      ]"
-    ></TeamSection>
+    
 
     <SimpleFeatureSection></SimpleFeatureSection>
+   -->
   </main>
 </template>
 
