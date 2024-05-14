@@ -20,7 +20,7 @@
   <Footer>
     <template #navigation>
       <RouterLink to="/legal/imprint">Impressum</RouterLink>
-      <RouterLink to="/datenschutzerklärung">Datenschutzerklärung</RouterLink>
+      <RouterLink to="/legal/privacy-policy">Datenschutzerklärung</RouterLink>
     </template>
     <template #connections>
       <LinkText to="https://github.com/olg-group" open-external new-tab>

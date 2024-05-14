@@ -33,6 +33,11 @@ const router = createRouter({
       component: () => import('@/views/legal/ImprintView.vue')
     },
     {
+      path: '/legal/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('@/views/legal/PrivacyPolicyView.vue')
+    },
+    {
       // this will be the default url handler => 404 Not Found
       path: '/:pathMatch(.*)*',
       name: 'notFound',
