@@ -23,8 +23,8 @@ import LinkText from "@/components/containment/LinkText.vue";
         description="Empowering Your Business with Smart IT Solutions and Consulting Expertise."
     >
       <template #buttons>
-        <LinkButton to="/" open-external>Get in Contact</LinkButton>
-        <LinkText to="/" open-external>Learn more <span aria-hidden="true">→</span></LinkText>
+<!--        <LinkButton to="/" open-external>Get in Contact</LinkButton>-->
+<!--        <LinkText to="/" open-external>Learn more <span aria-hidden="true">→</span></LinkText>-->
       </template>
     </HeroSection>
 

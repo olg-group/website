@@ -3,15 +3,15 @@
     <template #logo>
       <RouterLink to="/">
         <span class="sr-only">OLG Group</span>
-        <img class="h-9 w-auto" alt="OLG Logo" src="./assets/branding/LogoFull.svg" />
+        <img class="h-9 w-auto" alt="OLG Logo" src="@/assets/branding/LogoFullTransparent.svg" />
       </RouterLink>
     </template>
 
     <template #navigation>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/field/management-consulting">Management Consulting</RouterLink>
-      <RouterLink to="/it-consulting">IT Consulting</RouterLink>
-      <RouterLink to="/software-engineering">Software Engineering</RouterLink>
+      <LinkButton to="/about">About</LinkButton>
+<!--      <RouterLink to="/field/management-consulting">Management Consulting</RouterLink>-->
+<!--      <RouterLink to="/it-consulting">IT Consulting</RouterLink>-->
+<!--      <RouterLink to="/software-engineering">Software Engineering</RouterLink>-->
     </template>
   </Menubar>
 
@@ -45,6 +45,7 @@ import Footer from "@/components/Footer.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import LinkText from "@/components/containment/LinkText.vue";
+import LinkButton from "@/components/containment/LinkButton.vue";
 </script>
 
 <style>
