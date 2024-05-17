@@ -1,4 +1,4 @@
-# Impressum
+# Impressum / Imprint
 
 Kevin Ortmann Malte Linke Nick Gildenstern GbR <br />
 Am Fischteich 1A <br />
