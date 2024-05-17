@@ -23,7 +23,7 @@
           <div v-for="feature in features" :key="feature.name" class="relative pl-16">
             <dt class="text-base font-semibold leading-7 text-gray-900">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                <FontAwesomeIcon :icon="feature.icon" class="h-6 w-6 text-white" aria-hidden="true" />
+                <FontAwesomeIcon :icon="feature.icon" class="h-6 w-6 text-white" aria-hidden="true"/>
               </div>
               {{ feature.name }}
             </dt>

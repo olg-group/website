@@ -3,8 +3,11 @@ import HeroSection from "@/components/sections/HeroSection.vue";
 import ImageRightFeatureSection from "@/components/sections/ImageRightFeatureSection.vue";
 import {
   faArrowUp,
-  faBullseye, faCloud,
-  faForwardFast, faHandshakeAngle, faHeadset,
+  faBullseye,
+  faCloud,
+  faForwardFast,
+  faHandshakeAngle,
+  faHeadset,
   faLock,
   faMedal,
   faSeedling,
@@ -12,8 +15,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ImageLeftFeatureSection from "@/components/sections/ImageLeftFeatureSection.vue";
 import Centered2x2GridSection from "@/components/sections/Centered2x2GridSection.vue";
-import LinkButton from "@/components/containment/LinkButton.vue";
-import LinkText from "@/components/containment/LinkText.vue";
 </script>
 
 <template>
@@ -22,8 +23,8 @@ import LinkText from "@/components/containment/LinkText.vue";
       <template #title>OLG Group</template>
       <template #description>Empowering Your Business with Smart IT Solutions and Consulting Expertise.</template>
       <template #buttons>
-<!--        <LinkButton to="/" open-external>Get in Contact</LinkButton>-->
-<!--        <LinkText to="/" open-external>Learn more <span aria-hidden="true">→</span></LinkText>-->
+        <!--        <LinkButton to="/" open-external>Get in Contact</LinkButton>-->
+        <!--        <LinkText to="/" open-external>Learn more <span aria-hidden="true">→</span></LinkText>-->
       </template>
     </HeroSection>
 

@@ -3,19 +3,19 @@
     <template #logo>
       <RouterLink to="/">
         <span class="sr-only">OLG Group</span>
-        <img class="h-9 w-auto" alt="OLG Logo" src="@/assets/branding/LogoFullTransparent.svg" />
+        <img class="h-9 w-auto" alt="OLG Logo" src="@/assets/branding/LogoFullTransparent.svg"/>
       </RouterLink>
     </template>
 
     <template #navigation>
       <LinkButton to="/about">About</LinkButton>
-<!--      <RouterLink to="/field/management-consulting">Management Consulting</RouterLink>-->
-<!--      <RouterLink to="/it-consulting">IT Consulting</RouterLink>-->
-<!--      <RouterLink to="/software-engineering">Software Engineering</RouterLink>-->
+      <!--      <RouterLink to="/field/management-consulting">Management Consulting</RouterLink>-->
+      <!--      <RouterLink to="/it-consulting">IT Consulting</RouterLink>-->
+      <!--      <RouterLink to="/software-engineering">Software Engineering</RouterLink>-->
     </template>
   </Menubar>
 
-  <RouterView />
+  <RouterView/>
 
   <Footer>
     <template #navigation>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import {RouterView} from 'vue-router'
 import Menubar from "@/components/Menubar.vue";
 import Footer from "@/components/Footer.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
