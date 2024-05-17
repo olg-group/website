@@ -3,8 +3,8 @@ import HeroSection from "@/components/sections/HeroSection.vue";
 import ImageRightFeatureSection from "@/components/sections/ImageRightFeatureSection.vue";
 import {
   faArrowUp,
-  faBullseye,
-  faForwardFast,
+  faBullseye, faCloud,
+  faForwardFast, faHandshakeAngle, faHeadset,
   faLock,
   faMedal,
   faSeedling,
@@ -29,15 +29,15 @@ import LinkText from "@/components/containment/LinkText.vue";
     </HeroSection>
 
     <ImageRightFeatureSection
-        title="Software Engineering"
-        subtitle="Customized Software Solutions"
-        description="Our Software Engineering team utilizes modern technologies to develop tailored solutions perfectly aligned with your company's requirements. We stand by your side to develop high-quality software products that streamline your business processes and propel your success."
+        title="IT Consulting"
+        subtitle="Guiding you into the Future"
+        description="Our IT Consulting services are designed to help businesses navigate the complexities of the digital landscape. We are here to ensure that your IT infrastructure aligns with your goals. From system integration to cybersecurity, our team is dedicated to delivering solutions that drive efficiency and innovation."
         image-url="https://placehold.co/2432x1442"
 
         :features="[
-            {name: 'Secure', icon: faLock,     description: 'We prioritize security throughout the development lifecycle to safeguard your data and systems against cyber threats.'},
-            {name: 'Continuous Improvement',        icon: faStar,         description: 'We are committed to continuous improvement and constantly refine our processes for optimal performance.'},
-            {name: 'Eco-Friendly',    icon: faSeedling,  description: 'Our software engineering approach prioritizes eco-friendly development practices to support a healthier planet.'},
+            {name: 'Proactive Support', icon: faHeadset, description: 'Our approach to IT management prevents issues before they arise, keeping your operations running smoothly.'},
+            {name: 'Cutting-Edge Technology', icon: faCloud, description: 'We leverage the latest technologies to enhance your IT infrastructure, ensuring that your business stays ahead of the competition.'},
+            {name: 'Disaster Recovery', icon: faHandshakeAngle, description: 'We provide assistance and processes to quickly recover from IT disruptions.'},
         ]"
     ></ImageRightFeatureSection>
 
@@ -48,10 +48,10 @@ import LinkText from "@/components/containment/LinkText.vue";
         image-url="https://placehold.co/2432x1442"
 
         :features="[
-            {name: 'Secure', icon: faLock,     description: 'We prioritize security throughout the development lifecycle to safeguard your data and systems against cyber threats.'},
-            {name: 'Continuous Improvement',        icon: faStar,         description: 'We are committed to continuous improvement and constantly refine our processes for optimal performance.'},
-            {name: 'Eco-Friendly',    icon: faSeedling,  description: 'Our software engineering approach prioritizes eco-friendly development practices to support a healthier planet.'},
-            {name: 'Scalability',    icon: faArrowUp,  description: 'Our software solutions can easily scale with your business growth and evolve without sacrificing performance.'},
+            {name: 'Secure', icon: faLock, description: 'We prioritize security throughout the development lifecycle to safeguard your data and systems against cyber threats.'},
+            {name: 'Continuous Improvement', icon: faStar, description: 'We are committed to continuous improvement and constantly refine our processes for optimal performance.'},
+            {name: 'Eco-Friendly', icon: faSeedling,  description: 'Our software engineering approach prioritizes eco-friendly development practices to support a healthier planet.'},
+            {name: 'Scalability', icon: faArrowUp,  description: 'Our software solutions can easily scale with your business growth and evolve without sacrificing performance.'},
         ]"
     ></Centered2x2GridSection>
 
