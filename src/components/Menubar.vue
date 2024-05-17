@@ -1,6 +1,6 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="flex transition-colors delay-150 items-center justify-between p-6 lg:px-8" aria-label="Global" :transparent="navbarTransparent">
       <div class="flex lg:flex-1">
         <slot name="logo">
 
@@ -50,14 +50,22 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
-
 import {Dialog, DialogPanel} from "@headlessui/vue";
-import {ref} from 'vue';
+import {ref, onMounted, onBeforeUnmount} from 'vue';
+
+let navbarTransparent = ref(true);
+const handleScroll = () => navbarTransparent.value = window.scrollY <= 10;
+onMounted(() => window.addEventListener("scroll", handleScroll));
+onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll));
 
 const mobileMenuOpen = ref(false)
 </script>
 
 <style scoped>
+nav[transparent=false] {
+  @apply bg-white;
+}
+
 .mobileMenu * {
   @apply -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50;
 }
