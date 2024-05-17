@@ -2,14 +2,13 @@
 import SimpleHeaderSection from "@/components/sections/SimpleHeaderSection.vue";
 import SquareImageFeatureSection from "@/components/sections/SquareImageFeatureSection.vue";
 import {
-  faArrowUp, faBullseye, faChartLine,
-  faCross,
+  faBullseye,
+  faChartLine,
   faFlask,
-  faGlasses, faGlobe, faHandshake, faHeadset,
-  faHeart,
+  faGlobe,
+  faHandshake,
   faLightbulb,
-  faLock,
-  faServer
+  faLock
 } from "@fortawesome/free-solid-svg-icons";
 import TeamSection from "@/components/sections/TeamSection.vue";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
@@ -17,6 +16,10 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import CenteredContentSection from "@/components/sections/CenteredContentSection.vue";
 
 import LogoFull from "@/assets/branding/LogoFull.svg";
+
+import KevinOrtmann from "@/assets/team/kevin-ortmann.jpg";
+import MalteLinke from "@/assets/team/malte-linke.jpg";
+import NickGildenstern from "@/assets/team/nick-gildenstern.jpg";
 </script>
 
 <template>
@@ -27,13 +30,13 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
     </SimpleHeaderSection>
 
     <SquareImageFeatureSection
-        :features="[
+      :features="[
             { name: 'Innovative Solutions', icon: faFlask },
             { name: 'Continuous Improvement', icon: faChartLine },
             { name: 'Tailored Strategies for Success', icon: faBullseye },
             { name: 'Collaborative Partnership', icon: faHandshake }]"
-        :logo="LogoFull as string"
-        alt="OLG Group Logo"
+      :logo="LogoFull as string"
+      alt="OLG Group Logo"
     >
       <template #title>OLG Group</template>
       <template #description>Empowering Your Business with Smart IT Solutions and Consulting Expertise.</template>
@@ -42,7 +45,8 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
     <CenteredContentSection>
       <template #head>
         <p class="text-base font-semibold leading-7 text-indigo-600">About the OLG Group</p>
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your Partner in IT and Management Consulting</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Your Partner in IT and Management
+          Consulting</h1>
         <p class="mt-6 text-xl leading-8 text-gray-700">
           Founded in 2024, OLG Group is dedicated to delivering top-tier IT and management consulting services, as well
           as innovative software solutions. We specialize in empowering small companies and startups to excel in the
@@ -96,11 +100,11 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
     </CenteredContentSection>
 
     <TeamSection
-        :people="[
+      :people="[
       {
         name: 'Kevin Ortmann',
         role: 'Managing Partner',
-        imageUrl: '/src/assets/team/kevin-ortmann.jpg',
+        imageUrl: KevinOrtmann as string,
         connections: [
           { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/kevin-ortmann/' },
           { name: 'GitHub', icon: faGithub, to: 'https://github.com/KevinOrtmann' }
@@ -109,7 +113,7 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
       {
         name: 'Malte Linke',
         role: 'Managing Partner',
-        imageUrl: '/src/assets/team/malte-linke.jpg',
+        imageUrl: MalteLinke as string,
         connections: [
           { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
           { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
@@ -118,7 +122,7 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
       {
         name: 'Nick Gildenstern',
         role: 'Managing Partner',
-        imageUrl: '/src/assets/team/nick-gildenstern.jpg',
+        imageUrl: NickGildenstern as string,
         connections: [
           { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/nick-gildenstern-477300222/' },
           { name: 'GitHub', icon: faGithub, to: 'https://github.com/NickGildenstern/' }
