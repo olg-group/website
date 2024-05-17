@@ -15,6 +15,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ImageLeftFeatureSection from "@/components/sections/ImageLeftFeatureSection.vue";
 import Centered2x2GridSection from "@/components/sections/Centered2x2GridSection.vue";
+
+import ITConsultingImage from '@/assets/images/ITConsulting.png';
+import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png';
 </script>
 
 <template>
@@ -29,7 +32,7 @@ import Centered2x2GridSection from "@/components/sections/Centered2x2GridSection
     </HeroSection>
 
     <ImageRightFeatureSection
-        image-url="https://placehold.co/2432x1442"
+        :image-url="ITConsultingImage as string"
 
         :features="[
             {name: 'Proactive Support', icon: faHeadset, description: 'Our approach to IT management prevents issues before they arise, keeping your operations running smoothly.'},
@@ -65,7 +68,7 @@ import Centered2x2GridSection from "@/components/sections/Centered2x2GridSection
     </Centered2x2GridSection>
 
     <ImageLeftFeatureSection
-        image-url="https://placehold.co/2432x1442"
+        :image-url="ManagementConsultingImage as string"
 
         :features="[
             {name: 'Customer-centric', icon: faBullseye, description: 'We focus on your individual situation and the associated needs.'},
