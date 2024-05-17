@@ -21,19 +21,21 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
 
 <template>
   <main>
-    <SimpleHeaderSection>
+    <SimpleHeaderSection class="pt-32 pb-12 sm:pt-40 sm:pb-0">
       <template #title>About us</template>
+      <template #description>Who are we? Find out more blelow.</template>
     </SimpleHeaderSection>
 
     <SquareImageFeatureSection
-        title="OLG Group"
-        description="Empowering Your Business with Smart IT Solutions and Consulting Expertise."
         :features="[
             { name: 'Modern Solutions', icon: faFlask }, { name: 'Customer Focused', icon: faHeart },
             { name: 'Jesus Bois', icon: faCross }, { name: 'Cool', icon: faGlasses }]"
         :logo="LogoFull as string"
         alt="OLG Group Logo"
-    ></SquareImageFeatureSection>
+    >
+      <template #title>OLG Group</template>
+      <template #description>Empowering Your Business with Smart IT Solutions and Consulting Expertise.</template>
+    </SquareImageFeatureSection>
 
     <CenteredContentSection>
       <template #head>
@@ -69,45 +71,40 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
       </template>
     </CenteredContentSection>
 
-<TeamSection
-      title="Our Management Team"
-      description="Driven by our management, our team unites diverse disciplines to innovate in technology and business consulting."
-      :people="[
-          {
-            name: 'Kevin Ortmann',
-            role: 'Managing Partner',
-            imageUrl: '/src/assets/team/kevin-ortmann.jpg',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/kevin-ortmann/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/KevinOrtmann' }
-            ]
-          },
-          {
-            name: 'Malte Linke',
-            role: 'Managing Partner',
-            imageUrl: '/src/assets/team/malte-linke.jpg',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
-            ]
-          },
-          {
-            name: 'Nick Gildenstern',
-            role: 'Managing Partner',
-            imageUrl: '/src/assets/team/nick-gildenstern.jpg',
-            connections: [
-                { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/nick-gildenstern-477300222/' },
-                { name: 'GitHub', icon: faGithub, to: 'https://github.com/NickGildenstern/' }
-            ]
-          },
-      ]"
-    ></TeamSection>
-    <!--
-
-
-
-        <SimpleFeatureSection></SimpleFeatureSection>
-       -->
+  <TeamSection
+    :people="[
+      {
+        name: 'Kevin Ortmann',
+        role: 'Managing Partner',
+        imageUrl: '/src/assets/team/kevin-ortmann.jpg',
+        connections: [
+          { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/kevin-ortmann/' },
+          { name: 'GitHub', icon: faGithub, to: 'https://github.com/KevinOrtmann' }
+        ]
+      },
+      {
+        name: 'Malte Linke',
+        role: 'Managing Partner',
+        imageUrl: '/src/assets/team/malte-linke.jpg',
+        connections: [
+          { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
+          { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
+        ]
+      },
+      {
+        name: 'Nick Gildenstern',
+        role: 'Managing Partner',
+        imageUrl: '/src/assets/team/nick-gildenstern.jpg',
+        connections: [
+          { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/nick-gildenstern-477300222/' },
+          { name: 'GitHub', icon: faGithub, to: 'https://github.com/NickGildenstern/' }
+        ]
+      },
+    ]"
+  >
+    <template #title>Our Management Team</template>
+    <template #description>Driven by our management, our team unites diverse disciplines to innovate in technology and business consulting.</template>
+  </TeamSection>
   </main>
 </template>
 

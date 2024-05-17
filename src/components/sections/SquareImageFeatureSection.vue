@@ -13,9 +13,15 @@
             />
           </slot>
           <div class="flex-1 w-full">
-            <h2 class="md:text-2xl text-xl text-gray-900 tracking-tighter font-bold">{{ title }}</h2>
+            <h2 class="md:text-2xl text-xl text-gray-900 tracking-tighter font-bold">
+              <slot name="title">
+
+              </slot>
+            </h2>
             <p class="text-gray-900 text-lg leading-8 mt-6">
-              {{ description }}
+              <slot name="description">
+
+              </slot>
             </p>
             <ul v-if="features != null" class="text-gray-600 grid grid-cols-1 gap-y-3 gap-x-4 mt-10 md:gap-x-8 md:grid-cols-2">
               <li v-for="feature in features" :key="feature.name" class="flex gap-[0.75rem]">
@@ -40,8 +46,6 @@ interface FeaturePoint {
 }
 
 const props = defineProps({
-  title: String,
-  description: String,
   logo: String,
   alt: String,
   features: Array as () => FeaturePoint[] | null
