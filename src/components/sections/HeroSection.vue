@@ -9,10 +9,14 @@
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
       <div class="text-center">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          <slot name="title">{{ title }}</slot>
+          <slot name="title">
+
+          </slot>
         </h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">
-          <slot name="description">{{ description }}</slot>
+          <slot name="description">
+
+          </slot>
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <slot name="buttons">
@@ -31,10 +35,6 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  title: { type: String, default: null, required: false },
-  description: { type: String, required: true }
-})
 </script>
 
 <style scoped>

@@ -21,10 +21,9 @@ import LogoFull from "@/assets/branding/LogoFull.svg";
 
 <template>
   <main>
-    <SimpleHeaderSection
-      title="About us"
-      description=""
-    ></SimpleHeaderSection>
+    <SimpleHeaderSection>
+      <template #title>About us</template>
+    </SimpleHeaderSection>
 
     <SquareImageFeatureSection
         title="OLG Group"
