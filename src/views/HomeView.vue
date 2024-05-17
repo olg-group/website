@@ -32,9 +32,9 @@ import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png'
     </HeroSection>
 
     <ImageRightFeatureSection
-        :image-url="ITConsultingImage as string"
+      :image-url="ITConsultingImage as string"
 
-        :features="[
+      :features="[
             {name: 'Proactive Support', icon: faHeadset, description: 'Our approach to IT management prevents issues before they arise, keeping your operations running smoothly.'},
             {name: 'Cutting-Edge Technology', icon: faCloud, description: 'We leverage the latest technologies to enhance your IT infrastructure, ensuring that your business stays ahead of the competition.'},
             {name: 'Disaster Recovery', icon: faHandshakeAngle, description: 'We provide assistance and processes to quickly recover from IT disruptions.'},
@@ -51,7 +51,7 @@ import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png'
     </ImageRightFeatureSection>
 
     <Centered2x2GridSection
-        :features="[
+      :features="[
             {name: 'Secure', icon: faLock, description: 'We prioritize security throughout the development lifecycle to safeguard your data and systems against cyber threats.'},
             {name: 'Continuous Improvement', icon: faStar, description: 'We are committed to continuous improvement and constantly refine our processes for optimal performance.'},
             {name: 'Eco-Friendly', icon: faSeedling,  description: 'Our software engineering approach prioritizes eco-friendly development practices to support a healthier planet.'},
@@ -68,9 +68,9 @@ import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png'
     </Centered2x2GridSection>
 
     <ImageLeftFeatureSection
-        :image-url="ManagementConsultingImage as string"
+      :image-url="ManagementConsultingImage as string"
 
-        :features="[
+      :features="[
             {name: 'Customer-centric', icon: faBullseye, description: 'We focus on your individual situation and the associated needs.'},
             {name: 'Quality', icon: faMedal, description: 'We have the highest standards for the quality of our work.'},
             {name: 'Goal-oriented', icon: faForwardFast, description: 'We concentrate on results. At the core of our strategy lies effective action.'},

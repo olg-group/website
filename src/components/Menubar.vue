@@ -1,6 +1,7 @@
 <template>
   <header class="fixed inset-x-0 top-0 z-50">
-    <nav class="flex transition-colors delay-150 items-center justify-between p-6 lg:px-8" aria-label="Global" :transparent="navbarTransparent">
+    <nav class="flex transition-colors delay-150 items-center justify-between p-6 lg:px-8" aria-label="Global"
+         :transparent="navbarTransparent">
       <div class="flex lg:flex-1">
         <slot name="logo">
 
@@ -23,7 +24,7 @@
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-50"/>
       <DialogPanel
-          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <slot name="logo">
 
@@ -51,7 +52,7 @@
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
 import {Dialog, DialogPanel} from "@headlessui/vue";
-import {ref, onMounted, onBeforeUnmount} from 'vue';
+import {onBeforeUnmount, onMounted, ref} from 'vue';
 
 let navbarTransparent = ref(true);
 const handleScroll = () => navbarTransparent.value = window.scrollY <= 10;

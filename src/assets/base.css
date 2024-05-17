@@ -5,29 +5,29 @@
 
 /* define mardown css rules here */
 .markdown-body h1 {
-    @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+  @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
 }
 
 .markdown-body h2 {
-    @apply mt-16 text-2xl font-bold tracking-tight text-gray-900;
+  @apply mt-16 text-2xl font-bold tracking-tight text-gray-900;
 }
 
 .markdown-body h3 {
-    @apply mt-8 text-xl font-bold tracking-tight text-gray-900;
+  @apply mt-8 text-xl font-bold tracking-tight text-gray-900;
 }
 
 .markdown-body h4 {
-    @apply mt-4 mb-2 font-bold tracking-tight text-gray-900;
+  @apply mt-4 mb-2 font-bold tracking-tight text-gray-900;
 }
 
 .markdown-body p, .markdown-body ul {
-    @apply mt-6 text-xl leading-8 text-gray-700;
+  @apply mt-6 text-xl leading-8 text-gray-700;
 }
 
 .markdown-body a {
-    @apply mt-6 text-xl leading-8 text-blue-400;
+  @apply mt-6 text-xl leading-8 text-blue-400;
 }
 
 .markdown-body ul {
-    @apply ml-6 list-disc;
+  @apply ml-6 list-disc;
 }
