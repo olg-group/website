@@ -43,7 +43,11 @@ const router = createRouter({
       name: 'notFound',
       component: NotFound
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 };
+  }
 } as RouterOptions)
 
 export default router
