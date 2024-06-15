@@ -20,10 +20,11 @@ import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png'
 import ContactSection from "@/components/sections/ContactSection.vue";
 import SuccessDialog from "@/components/dialogs/SuccessDialog.vue";
 import {ref} from "vue";
+import HomeView from "@/views/HomeView.vue";
 
 // handle contact form events
 const contactFormShown = ref(false);
-function handleContactFormSubmit(formData) {
+function handleContactFormSubmit(formData: FormData) {
   contactFormShown.value = true;
 
   const body = {
@@ -44,6 +45,10 @@ function handleContactFormSubmit(formData) {
     body: JSON.stringify(body)
   });
 }
+
+// why this alias, you may ask.
+// well because of typescript. and typescript sometimes sucks...
+const reloadPage = () => window.location.reload();
 </script>
 
 <template>
@@ -114,7 +119,7 @@ function handleContactFormSubmit(formData) {
     <!-- Contact Form -->
     <SuccessDialog
       :open="contactFormShown"
-      @click="this.$router.go(0)"
+      @click="reloadPage"
     >
       <template #title>Thank You</template>
       <template #description>
