@@ -130,7 +130,9 @@ function handleContactFormSubmit(formData) {
     >
       <template #title>Interested? Contact Us!</template>
       <template #description>
-        If you have any questions, feedback, or need assistance, please fill out the form below.
+        Are you ready for the next step in your IT and business journey?
+        <br/>
+        Please fill out the form below, and one of our experts will get back to you as soon as possible.
       </template>
       <template #button>
         Lets talk
