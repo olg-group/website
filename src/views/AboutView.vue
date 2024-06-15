@@ -26,7 +26,7 @@ import NickGildenstern from "@/assets/team/nick-gildenstern.jpg";
   <main>
     <SimpleHeaderSection class="pt-32 pb-12 sm:pt-40 sm:pb-0">
       <template #title>About us</template>
-      <template #description>Who are we? Find out more blelow.</template>
+      <template #description>Who are we? Find out more below.</template>
     </SimpleHeaderSection>
 
     <SquareImageFeatureSection
