@@ -15,9 +15,37 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ImageLeftFeatureSection from "@/components/sections/ImageLeftFeatureSection.vue";
 import Centered2x2GridSection from "@/components/sections/Centered2x2GridSection.vue";
-
 import ITConsultingImage from '@/assets/images/ITConsulting.png';
 import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png';
+import ContactSection from "@/components/sections/ContactSection.vue";
+import SuccessDialog from "@/components/dialogs/SuccessDialog.vue";
+import {ref} from "vue";
+
+// handle contact form events
+const contactFormShown = ref(false);
+function handleContactFormSubmit(formData) {
+  contactFormShown.value = true;
+  console.log(formData);
+
+  const body = {
+    firstname: formData.get("first-name"),
+    lastname: formData.get("last-name"),
+    subject: "Contact Request",
+    company: formData.get("company"),
+    email: formData.get("email"),
+    message: formData.get("message")
+  };
+  console.log(body)
+
+  fetch("https://api.olg-group.com/contact/submit", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  })
+}
 </script>
 
 <template>
@@ -84,6 +112,30 @@ import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png'
         & investment banking or marketing is fully available to you.
       </template>
     </ImageLeftFeatureSection>
+
+    <!-- Contact Form -->
+    <SuccessDialog
+      :open="contactFormShown"
+      @click="this.$router.go(0)"
+    >
+      <template #title>Thank You</template>
+      <template #description>
+        We have received your contact request and will get back to you as soon as possible.
+      </template>
+      <template #button>Go back</template>
+    </SuccessDialog>
+    <ContactSection
+      @submit="handleContactFormSubmit"
+      add-company-field add-email-field company-optional
+    >
+      <template #title>Contact Us</template>
+      <template #description>
+        If you have any questions, feedback, or need assistance, please fill out the form below.
+      </template>
+      <template #button>
+        Lets talk
+      </template>
+    </ContactSection>
   </main>
 </template>
 
