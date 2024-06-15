@@ -15,9 +15,40 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ImageLeftFeatureSection from "@/components/sections/ImageLeftFeatureSection.vue";
 import Centered2x2GridSection from "@/components/sections/Centered2x2GridSection.vue";
-
 import ITConsultingImage from '@/assets/images/ITConsulting.png';
 import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png';
+import ContactSection from "@/components/sections/ContactSection.vue";
+import SuccessDialog from "@/components/dialogs/SuccessDialog.vue";
+import {ref} from "vue";
+import HomeView from "@/views/HomeView.vue";
+
+// handle contact form events
+const contactFormShown = ref(false);
+function handleContactFormSubmit(formData: FormData) {
+  contactFormShown.value = true;
+
+  const body = {
+    firstname: formData.get("first-name"),
+    lastname: formData.get("last-name"),
+    email: formData.get("email"),
+    company: formData.get("company"),
+    subject: formData.get("subject"),
+    message: formData.get("message")
+  };
+
+  fetch("https://api.olg-group.com/contact/submit", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+}
+
+// why this alias, you may ask.
+// well because of typescript. and typescript sometimes sucks...
+const reloadPage = () => window.location.reload();
 </script>
 
 <template>
@@ -84,6 +115,34 @@ import ManagementConsultingImage from '@/assets/images/ManagementConsulting.png'
         & investment banking or marketing is fully available to you.
       </template>
     </ImageLeftFeatureSection>
+
+    <!-- Contact Form -->
+    <SuccessDialog
+      :open="contactFormShown"
+      @click="reloadPage"
+    >
+      <template #title>Thank You</template>
+      <template #description>
+        We have received your contact request and will get back to you as soon as possible.
+      </template>
+      <template #button>Go back</template>
+    </SuccessDialog>
+    <ContactSection
+      @submit="handleContactFormSubmit"
+      privacy-policy="/legal/privacy-policy"
+      add-email-field add-subject-field
+      add-company-field company-optional
+    >
+      <template #title>Interested? Contact Us!</template>
+      <template #description>
+        Are you ready for the next step in your IT and business journey?
+        <br/>
+        Please fill out the form below, and one of our experts will get back to you as soon as possible.
+      </template>
+      <template #button>
+        Lets talk
+      </template>
+    </ContactSection>
   </main>
 </template>
 
