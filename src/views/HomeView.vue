@@ -25,17 +25,15 @@ import {ref} from "vue";
 const contactFormShown = ref(false);
 function handleContactFormSubmit(formData) {
   contactFormShown.value = true;
-  console.log(formData);
 
   const body = {
     firstname: formData.get("first-name"),
     lastname: formData.get("last-name"),
-    subject: "Contact Request",
-    company: formData.get("company"),
     email: formData.get("email"),
+    company: formData.get("company"),
+    subject: formData.get("subject"),
     message: formData.get("message")
   };
-  console.log(body)
 
   fetch("https://api.olg-group.com/contact/submit", {
     method: 'POST',
@@ -44,7 +42,7 @@ function handleContactFormSubmit(formData) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)
-  })
+  });
 }
 </script>
 
@@ -126,9 +124,11 @@ function handleContactFormSubmit(formData) {
     </SuccessDialog>
     <ContactSection
       @submit="handleContactFormSubmit"
-      add-company-field add-email-field company-optional
+      privacy-policy="/legal/privacy-policy"
+      add-email-field add-subject-field
+      add-company-field company-optional
     >
-      <template #title>Contact Us</template>
+      <template #title>Interested? Contact Us!</template>
       <template #description>
         If you have any questions, feedback, or need assistance, please fill out the form below.
       </template>

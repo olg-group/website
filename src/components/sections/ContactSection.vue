@@ -50,6 +50,15 @@
                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
           </div>
         </div>
+        <div v-if="addSubjectField" class="sm:col-span-2">
+          <label for="subject" class="block text-sm font-semibold leading-6 text-gray-900">
+            Subject
+          </label>
+          <div class="mt-2.5">
+            <input type="text" name="subject" id="subject" autocomplete="organization" :required="!companyOptional"
+                   class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+          </div>
+        </div>
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
           <div class="mt-2.5">
@@ -66,15 +75,15 @@
                     :class="[agreed ? 'translate-x-3.5' : 'translate-x-0', 'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out']"/>
             </Switch>
           </div>
-          <SwitchLabel class="text-sm leading-6 text-gray-600">
+          <SwitchLabel class="text-sm leading-6 text-gray-600" >
             By selecting this, you agree to our
             {{ ' ' }}
-            <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
+            <RouterLink :to="privacyPolicy" class="font-semibold text-indigo-600">privacy&nbsp;policy</RouterLink>.
           </SwitchLabel>
         </SwitchGroup>
       </div>
       <div class="mt-10">
-        <button type="submit"
+        <button type="submit" :disabled="!agreed"
                 class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
           <slot name="button">
             Let's talk
@@ -94,6 +103,7 @@ const agreed = ref(false)
 const emit = defineEmits(['submit']);
 const props = defineProps({
   addCompanyField: {type: Boolean, default: false, required: false},
+  addSubjectField: {type: Boolean, default: false, required: false},
   companyOptional: {type: Boolean, default: false, required: false},
   addEmailField: {type: Boolean, default: false, required: false},
   privacyPolicy: {type: String, default: undefined, required: false}
@@ -101,6 +111,7 @@ const props = defineProps({
 
 function handleSubmit(submit) {
   submit.preventDefault();
+
   const formData = new FormData(submit.target);
   emit('submit', formData);
 }
