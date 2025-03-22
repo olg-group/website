@@ -33,7 +33,7 @@
       </LinkText>
     </template>
     <template #copyright>
-      © 2024 OLG Group All rights reserved
+      © 2025 OLG Group All rights reserved
     </template>
   </Footer>
 </template>
