@@ -127,7 +127,7 @@ const reloadPage = () => window.location.reload();
       </template>
       <template #button>Go back</template>
     </SuccessDialog>
-    <ContactSection
+<!--    <ContactSection
       @submit="handleContactFormSubmit"
       privacy-policy="/legal/privacy-policy"
       add-email-field add-subject-field
@@ -142,7 +142,7 @@ const reloadPage = () => window.location.reload();
       <template #button>
         Lets talk
       </template>
-    </ContactSection>
+    </ContactSection>-->
   </main>
 </template>
 
