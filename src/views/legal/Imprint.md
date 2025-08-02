@@ -6,6 +6,7 @@ Am Fischteich 1A <br />
 
 **Vertreten durch / Represented by:** <br />
 Kevin Ortmann <br />
+Malte Linke <br />
 Nick Gildenstern
 
 ## Kontakt / Contact
