@@ -18,6 +18,7 @@ import CenteredContentSection from "@/components/sections/CenteredContentSection
 import LogoFull from "@/assets/branding/LogoFull.svg";
 
 import KevinOrtmann from "@/assets/team/kevin-ortmann.jpg";
+import MalteLinke from "@/assets/team/malte-linke.jpg";
 import NickGildenstern from "@/assets/team/nick-gildenstern.jpg";
 </script>
 
