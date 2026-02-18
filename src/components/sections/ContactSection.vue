@@ -109,7 +109,7 @@ const props = defineProps({
   privacyPolicy: {type: String, default: undefined, required: false}
 })
 
-function handleSubmit(submit: FormDataEvent) {
+function handleSubmit(submit: SubmitEvent) {
   submit.preventDefault();
 
   const formData = new FormData(submit.target as HTMLFormElement);

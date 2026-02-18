@@ -1,7 +1,7 @@
 <template>
   <RouterLink
     v-if="!openExternal && !newTab"
-    :to="to"
+    :to="to!"
     class="text-sm font-semibold leading-6 text-gray-900"
 
   >
