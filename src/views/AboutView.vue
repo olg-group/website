@@ -3,7 +3,7 @@ import SimpleHeaderSection from "@/components/sections/SimpleHeaderSection.vue";
 import SquareImageFeatureSection from "@/components/sections/SquareImageFeatureSection.vue";
 import {
   faBullseye,
-  faChartLine,
+  faChartLine, faEnvelope,
   faFlask,
   faGlobe,
   faHandshake,
@@ -107,7 +107,8 @@ import NickGildenstern from "@/assets/team/nick-gildenstern.jpg";
         imageUrl: KevinOrtmann as string,
         connections: [
           { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/kevin-ortmann/' },
-          { name: 'GitHub', icon: faGithub, to: 'https://github.com/KevinOrtmann' }
+          { name: 'GitHub', icon: faGithub, to: 'https://github.com/KevinOrtmann' },
+          { name: 'Mail', icon: faEnvelope, to: 'mailto:kevin.ortmann@olg-group.com' }
         ]
       },
       {
@@ -116,7 +117,8 @@ import NickGildenstern from "@/assets/team/nick-gildenstern.jpg";
         imageUrl: MalteLinke as string,
         connections: [
           { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-          { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' }
+          { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' },
+          { name: 'Mail', icon: faEnvelope, to: 'mailto:malte.linke@olg-group.com' }
         ]
       },
       {
