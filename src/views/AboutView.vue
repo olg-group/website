@@ -112,16 +112,6 @@ import NickGildenstern from "@/assets/team/nick-gildenstern.jpg";
         ]
       },
       {
-        name: 'Malte Linke',
-        role: 'Managing Partner',
-        imageUrl: MalteLinke as string,
-        connections: [
-          { name: 'LinkedIn', icon: faLinkedin, to: 'https://www.linkedin.com/in/malte-linke-b51301222/' },
-          { name: 'GitHub', icon: faGithub, to: 'https://github.com/parzival-space/' },
-          { name: 'Mail', icon: faEnvelope, to: 'mailto:malte.linke@olg-group.com' }
-        ]
-      },
-      {
         name: 'Nick Gildenstern',
         role: 'Managing Partner',
         imageUrl: NickGildenstern as string,
